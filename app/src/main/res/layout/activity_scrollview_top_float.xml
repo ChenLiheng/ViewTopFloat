@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.devnote.viewtopfloat.ScrollviewTopFloat">
+
+    <info.devnote.viewtopfloat.weight.ObservableScrollView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="center"
+                android:src="@drawable/img_header" />
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_float"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/img_head"
+                android:orientation="horizontal">
+
+                <include layout="@layout/float_view" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </info.devnote.viewtopfloat.weight.ObservableScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="This Is Title"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top_float"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/layout_title"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</RelativeLayout>
